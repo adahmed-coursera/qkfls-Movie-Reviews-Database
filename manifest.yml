@@ -1,5 +1,10 @@
 ---
 applications:
- - name: movies-reviews-database
-   random-route: false
+ - name: movies-reviews-database-ca7
+   buildpacks: 
+    - nodejs_buildpack
+   random-route: true
    memory: 128M
+   services:
+    - nlp-rx
+    - Cloudant-rx
